@@ -182,6 +182,100 @@
      </layout>
     </widget>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>30</y>
+      <width>534</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="schoolLayout">
+     <item row="0" column="0" colspan="2">
+      <widget class="QCheckBox" name="medalCB">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Имеется золотая/серебрянная медаль</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="averageScoreLabel">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Средняя оценка аттестата:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDoubleSpinBox" name="averageScoreDB"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="foreignLangLabel">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Изучаемый иностранный язык:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="foreignLangCombBox">
+       <property name="maxCount">
+        <number>6</number>
+       </property>
+       <property name="placeholderText">
+        <string>Изучаемый иностранный язык</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Английский</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Немецкий</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Французский</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Корейский</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Китайский</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Японский</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
