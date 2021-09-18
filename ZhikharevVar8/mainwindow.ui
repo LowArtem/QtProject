@@ -230,7 +230,7 @@
        <number>5</number>
       </property>
       <item>
-       <widget class="QCheckBox" name="medalCB">
+       <widget class="QCheckBox" name="medalCheckB">
         <property name="font">
          <font>
           <family>Tahoma</family>
@@ -340,6 +340,189 @@
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QFrame" name="examFrame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>300</y>
+      <width>621</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <widget class="QLabel" name="examScoreLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>351</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Оценки на вступительных экзаменах:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>591</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_5">
+      <property name="horizontalSpacing">
+       <number>150</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QSplitter" name="splitter_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="handleWidth">
+         <number>35</number>
+        </property>
+        <widget class="QComboBox" name="lessonCB_1">
+         <item>
+          <property name="text">
+           <string>Математика I</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Математика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Русский язык</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="lessonCB_2">
+         <item>
+          <property name="text">
+           <string>Математика I</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Математика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Русский язык</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="lessonCB_3">
+         <item>
+          <property name="text">
+           <string>Математика I</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Математика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Физика II</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Русский язык</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSplitter" name="splitter_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="handleWidth">
+         <number>35</number>
+        </property>
+        <widget class="QSpinBox" name="scoreSB_1">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="scoreSB_2"/>
+        <widget class="QSpinBox" name="scoreSB_3"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="contractCheckB">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>430</y>
+      <width>429</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Готов учиться на договорной основе</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
