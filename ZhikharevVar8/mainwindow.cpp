@@ -51,6 +51,8 @@ void MainWindow::on_medalCheckB_stateChanged(int arg1)
     {
         ui->averageScoreDB->setMinimum(4.6);
         ui->averageScoreDB->setMaximum(5.0);
+
+        this->on_scoreSB_1_valueChanged(ui->scoreSB_1->value());
     }
 }
 
@@ -74,6 +76,31 @@ void MainWindow::on_lessonCB_3_currentIndexChanged(int index)
     // обеспечения отсутствия повторений предметов из lessonCB_3 в остальных lesson combobox'ах
     ComboBoxChanged(ui->lessonCB_3, ui->lessonCB_1, ui->lessonCB_2, index);
 }
+
+
+void MainWindow::on_scoreSB_1_valueChanged(int arg1)
+{
+    // есть медаль и оценка за первый экзамен >= 90
+    if (ui->medalCheckB->isChecked() && arg1 >= 90)
+    {
+        ui->scoreSB_2->setValue(100);
+        ui->scoreSB_2->setReadOnly(true);
+
+        ui->scoreSB_3->setValue(100);
+        ui->scoreSB_3->setReadOnly(true);
+    }
+    // нет медали или оценка за первый экзамен < 90
+    else
+    {
+        ui->scoreSB_2->setValue(0);
+        ui->scoreSB_2->setReadOnly(false);
+
+        ui->scoreSB_3->setValue(0);
+        ui->scoreSB_3->setReadOnly(false);
+    }
+}
+
+
 
 
 

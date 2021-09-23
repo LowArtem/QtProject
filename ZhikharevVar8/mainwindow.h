@@ -25,6 +25,8 @@ private slots:
 
     void on_lessonCB_3_currentIndexChanged(int index);
 
+    void on_scoreSB_1_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 

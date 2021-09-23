@@ -37,200 +37,459 @@
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="personalDataFrame">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>621</width>
-      <height>281</height>
-     </rect>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>10</number>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <widget class="QLabel" name="personalDataLabel">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>171</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tahoma</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Анкетные данные:</string>
-     </property>
-    </widget>
-    <widget class="QSplitter" name="splitter">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>521</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="handleWidth">
-      <number>10</number>
-     </property>
-     <widget class="QWidget" name="layoutWidget">
-      <layout class="QFormLayout" name="formLayout_2">
-       <property name="horizontalSpacing">
-        <number>15</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="nameLabel">
-         <property name="font">
-          <font>
-           <family>Tahoma</family>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>ФИО:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="nameLine">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="maxLength">
-          <number>45</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <layout class="QFormLayout" name="formLayout_3">
-       <property name="horizontalSpacing">
-        <number>15</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="birthdateLabel">
-         <property name="font">
-          <font>
-           <family>Tahoma</family>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Дата рождения:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QDateEdit" name="birthdateEdit"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <layout class="QFormLayout" name="formLayout_4">
-       <property name="horizontalSpacing">
-        <number>20</number>
-       </property>
-       <property name="rightMargin">
-        <number>200</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="sexLabel">
-         <property name="font">
-          <font>
-           <family>Tahoma</family>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Пол:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <layout class="QHBoxLayout" name="sexHL">
-         <property name="spacing">
-          <number>4</number>
-         </property>
-         <property name="topMargin">
-          <number>8</number>
-         </property>
-         <property name="bottomMargin">
-          <number>8</number>
-         </property>
-         <item>
-          <widget class="QRadioButton" name="maleRB">
-           <property name="text">
-            <string>муж</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="femaleRB">
-           <property name="text">
-            <string>жен</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="otherRB">
-           <property name="text">
-            <string>другое</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="schoolFrame">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>10</y>
-      <width>451</width>
-      <height>281</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>0</y>
-       <width>431</width>
-       <height>275</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
       <property name="spacing">
-       <number>10</number>
-      </property>
-      <property name="topMargin">
-       <number>5</number>
-      </property>
-      <property name="bottomMargin">
-       <number>5</number>
+       <number>15</number>
       </property>
       <item>
-       <widget class="QCheckBox" name="medalCheckB">
+       <widget class="QFrame" name="personalDataFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <widget class="QLabel" name="personalDataLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>171</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Анкетные данные:</string>
+         </property>
+        </widget>
+        <widget class="QSplitter" name="splitter">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>521</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="handleWidth">
+          <number>10</number>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QFormLayout" name="formLayout_2">
+           <property name="horizontalSpacing">
+            <number>15</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="nameLabel">
+             <property name="font">
+              <font>
+               <family>Tahoma</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>ФИО:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nameLine">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="maxLength">
+              <number>45</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QFormLayout" name="formLayout_3">
+           <property name="horizontalSpacing">
+            <number>15</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="birthdateLabel">
+             <property name="font">
+              <font>
+               <family>Tahoma</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Дата рождения:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDateEdit" name="birthdateEdit"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QFormLayout" name="formLayout_4">
+           <property name="horizontalSpacing">
+            <number>20</number>
+           </property>
+           <property name="rightMargin">
+            <number>200</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="sexLabel">
+             <property name="font">
+              <font>
+               <family>Tahoma</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Пол:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="sexHL">
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <property name="topMargin">
+              <number>8</number>
+             </property>
+             <property name="bottomMargin">
+              <number>8</number>
+             </property>
+             <item>
+              <widget class="QRadioButton" name="maleRB">
+               <property name="text">
+                <string>муж</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="femaleRB">
+               <property name="text">
+                <string>жен</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="otherRB">
+               <property name="text">
+                <string>другое</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="examFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <widget class="QLabel" name="examScoreLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>351</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Оценки на вступительных экзаменах:</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>581</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_5">
+          <property name="horizontalSpacing">
+           <number>150</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QSplitter" name="splitter_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="handleWidth">
+             <number>35</number>
+            </property>
+            <widget class="QComboBox" name="lessonCB_1">
+             <item>
+              <property name="text">
+               <string>Математика I</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Физика II</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Русский язык</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QComboBox" name="lessonCB_2">
+             <item>
+              <property name="text">
+               <string>Математика II</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Физика II</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Русский язык</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QComboBox" name="lessonCB_3">
+             <item>
+              <property name="text">
+               <string>Физика</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Физика II</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Русский язык</string>
+              </property>
+             </item>
+            </widget>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSplitter" name="splitter_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="handleWidth">
+             <number>35</number>
+            </property>
+            <widget class="QSpinBox" name="scoreSB_1">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="scoreSB_2">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="scoreSB_3">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>150</number>
+      </property>
+      <property name="bottomMargin">
+       <number>130</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="schoolFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>431</width>
+           <height>275</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QCheckBox" name="medalCheckB">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Имеется золотая/серебрянная медаль</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <layout class="QFormLayout" name="formLayout">
+              <property name="horizontalSpacing">
+               <number>15</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="averageScoreLabel">
+                <property name="font">
+                 <font>
+                  <family>Tahoma</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Средняя оценка аттестата:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="averageScoreDB">
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="foreignLangLabel">
+                <property name="font">
+                 <font>
+                  <family>Tahoma</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Изучаемый иностранный язык:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QCheckBox" name="engCB">
+                  <property name="text">
+                   <string>Английский</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="gerCB">
+                  <property name="text">
+                   <string>Немецкий</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="frCB">
+                  <property name="text">
+                   <string>Французский</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="korCB">
+                  <property name="text">
+                   <string>Корейский</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="chinCB">
+                  <property name="text">
+                   <string>Китайский</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="japCB">
+                  <property name="text">
+                   <string>Японский</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="contractCheckB">
         <property name="font">
          <font>
           <family>Tahoma</family>
@@ -238,274 +497,13 @@
          </font>
         </property>
         <property name="text">
-         <string>Имеется золотая/серебрянная медаль</string>
+         <string>Готов учиться на договорной основе</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <property name="spacing">
-         <number>10</number>
-        </property>
-        <item>
-         <layout class="QFormLayout" name="formLayout">
-          <property name="horizontalSpacing">
-           <number>15</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="averageScoreLabel">
-            <property name="font">
-             <font>
-              <family>Tahoma</family>
-              <pointsize>14</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Средняя оценка аттестата:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QDoubleSpinBox" name="averageScoreDB">
-            <property name="singleStep">
-             <double>0.100000000000000</double>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <property name="spacing">
-           <number>10</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="foreignLangLabel">
-            <property name="font">
-             <font>
-              <family>Tahoma</family>
-              <pointsize>14</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Изучаемый иностранный язык:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QCheckBox" name="engCB">
-              <property name="text">
-               <string>Английский</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="gerCB">
-              <property name="text">
-               <string>Немецкий</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="frCB">
-              <property name="text">
-               <string>Французский</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="korCB">
-              <property name="text">
-               <string>Корейский</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="chinCB">
-              <property name="text">
-               <string>Китайский</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="japCB">
-              <property name="text">
-               <string>Японский</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="examFrame">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>300</y>
-      <width>621</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <widget class="QLabel" name="examScoreLabel">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>351</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tahoma</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Оценки на вступительных экзаменах:</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>591</width>
-       <height>231</height>
-      </rect>
-     </property>
-     <layout class="QFormLayout" name="formLayout_5">
-      <property name="horizontalSpacing">
-       <number>150</number>
-      </property>
-      <item row="0" column="0">
-       <widget class="QSplitter" name="splitter_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="handleWidth">
-         <number>35</number>
-        </property>
-        <widget class="QComboBox" name="lessonCB_1">
-         <item>
-          <property name="text">
-           <string>Математика I</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Физика II</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Русский язык</string>
-          </property>
-         </item>
-        </widget>
-        <widget class="QComboBox" name="lessonCB_2">
-         <item>
-          <property name="text">
-           <string>Математика II</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Физика II</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Русский язык</string>
-          </property>
-         </item>
-        </widget>
-        <widget class="QComboBox" name="lessonCB_3">
-         <item>
-          <property name="text">
-           <string>Физика</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Физика II</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Русский язык</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QSplitter" name="splitter_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="handleWidth">
-         <number>35</number>
-        </property>
-        <widget class="QSpinBox" name="scoreSB_1">
-         <property name="maximum">
-          <number>100</number>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="scoreSB_2">
-         <property name="maximum">
-          <number>100</number>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="scoreSB_3">
-         <property name="maximum">
-          <number>100</number>
-         </property>
-        </widget>
        </widget>
       </item>
      </layout>
-    </widget>
-   </widget>
-   <widget class="QCheckBox" name="contractCheckB">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>430</y>
-      <width>429</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Tahoma</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Готов учиться на договорной основе</string>
-    </property>
-   </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
