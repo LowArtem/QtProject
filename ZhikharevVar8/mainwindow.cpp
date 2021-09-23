@@ -44,16 +44,16 @@ void MainWindow::on_medalCheckB_stateChanged(int arg1)
     if (arg1 == 0)
     {
         ui->averageScoreDB->setMinimum(3.0);
-        ui->averageScoreDB->setMaximum(4.5);
+        ui->averageScoreDB->setMaximum(4.5);                
     }
     // есть медаль
     else
     {
         ui->averageScoreDB->setMinimum(4.6);
-        ui->averageScoreDB->setMaximum(5.0);
-
-        this->on_scoreSB_1_valueChanged(ui->scoreSB_1->value());
+        ui->averageScoreDB->setMaximum(5.0);        
     }
+
+    this->on_scoreSB_1_valueChanged(ui->scoreSB_1->value());
 }
 
 
