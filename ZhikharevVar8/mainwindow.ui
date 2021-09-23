@@ -472,8 +472,16 @@
           <number>100</number>
          </property>
         </widget>
-        <widget class="QSpinBox" name="scoreSB_2"/>
-        <widget class="QSpinBox" name="scoreSB_3"/>
+        <widget class="QSpinBox" name="scoreSB_2">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="scoreSB_3">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
        </widget>
       </item>
      </layout>

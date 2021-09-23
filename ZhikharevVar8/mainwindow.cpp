@@ -87,6 +87,8 @@ void MainWindow::ComboBoxChanged(const QComboBox* currentBox, QComboBox* box1, Q
     if (currentTextIndex > -1)
     {
         QString currentText = currentBox->currentText();
+        QString currentBox1Text = box1->currentText();
+        QString currentBox2Text = box2->currentText();
 
         int foundItemIndex = box1->findText(currentText);
         box1->removeItem(foundItemIndex);
@@ -96,11 +98,11 @@ void MainWindow::ComboBoxChanged(const QComboBox* currentBox, QComboBox* box1, Q
 
        foreach (QString lesson, Lessons)
        {
-           if (box1->findText(lesson) == -1 && lesson != currentText)
+           if (box1->findText(lesson) == -1 && lesson != currentText && lesson != currentBox2Text)
            {
                box1->addItem(lesson);
            }
-           if (box2->findText(lesson) == -1 && lesson != currentText)
+           if (box2->findText(lesson) == -1 && lesson != currentText && lesson != currentBox1Text)
            {
                box2->addItem(lesson);
            }
