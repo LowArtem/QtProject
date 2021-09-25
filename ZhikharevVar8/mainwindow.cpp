@@ -6,9 +6,7 @@
 QList<QString> Lessons;
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
@@ -27,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
     {
         this->on_medalCheckB_stateChanged(0);
     }
-
 
 
     // заполнение списка предметов
@@ -112,6 +109,14 @@ void MainWindow::on_saveBtn_clicked()
     // Сохранение только при условии верного ввода
     if (ui->nameLine->hasAcceptableInput())
     {
+        if (ui->dataSelectorCB->currentText().contains("1"))
+        {
+            saveData(data1);
+        }
+        else
+        {
+            saveData(data2);
+        }
 
     }
     else
@@ -155,6 +160,80 @@ void MainWindow::ComboBoxChanged(const QComboBox* currentBox, QComboBox* box1, Q
            }
        }
     }
+}
+
+
+Lesson MainWindow::CastLessonType(const QComboBox *cb) const
+{
+    // Перевод текста в combobox'е в объект перечисления Lesson
+
+    if (cb->currentText() == "Математика I")
+        return Lesson::MATH1;
+    if (cb->currentText() == "Математика II")
+        return Lesson::MATH2;
+    if (cb->currentText() == "Физика")
+        return Lesson::PHYSICS;
+    if (cb->currentText() == "Физика II")
+        return Lesson::PHYSICS2;
+    if (cb->currentText() == "Русский язык")
+        return Lesson::RUSSIAN;
+
+    else throw new QException();
+}
+
+
+void MainWindow::saveData(ApplicantData &data)
+{
+    QString name = ui->nameLine->text();
+    QDate birthDate = ui->birthdateEdit->date();
+
+    Sex sex;
+    if (ui->maleRB->isEnabled())
+        sex = Sex::MALE;
+    else if (ui->femaleRB->isEnabled())
+        sex = Sex::FEMALE;
+    else
+        sex = Sex::OTHER;
+
+    bool hasMedal = ui->medalCheckB->isChecked();
+    double averageScore = ui->averageScoreDB->value();
+
+    QList<Language> foreignLanguages;
+    if (ui->engCB->isChecked())
+        foreignLanguages.append(Language::ENGLISH);
+    if (ui->gerCB->isChecked())
+        foreignLanguages.append(Language::GERMANY);
+    if (ui->frCB->isChecked())
+        foreignLanguages.append(Language::FRENCH);
+    if (ui->korCB->isChecked())
+        foreignLanguages.append(Language::KOREAN);
+    if (ui->chinCB->isChecked())
+        foreignLanguages.append(Language::CHINA);
+    if (ui->japCB->isChecked())
+        foreignLanguages.append(Language::JAPAN);
+
+
+    data.setName(name);
+    data.setBirthDate(birthDate);
+    data.setSex(sex);
+    data.setHasMedal(hasMedal);
+    data.setAverageScore(averageScore);
+    data.setForeignLanguage(foreignLanguages);
+
+    Lesson lesson = CastLessonType(ui->lessonCB_1);
+    double score = ui->scoreSB_1->value();
+
+    data.addExamScore(lesson, score);
+
+    lesson = CastLessonType(ui->lessonCB_2);
+    score = ui->scoreSB_2->value();
+
+    data.addExamScore(lesson, score);
+
+    lesson = CastLessonType(ui->lessonCB_3);
+    score = ui->scoreSB_3->value();
+
+    data.addExamScore(lesson, score);
 }
 
 

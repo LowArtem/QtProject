@@ -552,7 +552,7 @@
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
         </property>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="dataSelectorCB">
          <property name="geometry">
           <rect>
            <x>140</x>

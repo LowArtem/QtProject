@@ -4,8 +4,10 @@
 #include <QMainWindow>
 #include <QComboBox>
 #include <QMessageBox>
+#include <QException>
 
 #include "customvalidator.h"
+#include "applicantdata.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,7 +37,13 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
+    // Объекты записей
+    ApplicantData data1 = new ApplicantData(this);
+    ApplicantData data2 = new ApplicantData(this);
+
     // Мои функции:
     void ComboBoxChanged(const QComboBox* currentBox, QComboBox* box1, QComboBox* box2, const int currentTextIndex);
+    Lesson CastLessonType(const QComboBox* cb) const;
+    void saveData(ApplicantData &data);
 };
 #endif // MAINWINDOW_H
