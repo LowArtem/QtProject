@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QComboBox>
+#include <QMessageBox>
+
+#include "customvalidator.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +29,8 @@ private slots:
     void on_lessonCB_3_currentIndexChanged(int index);
 
     void on_scoreSB_1_valueChanged(int arg1);
+
+    void on_saveBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

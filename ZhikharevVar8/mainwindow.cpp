@@ -12,6 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // Настройка валидации textbox'a
+    QValidator *validator = new CustomValidator(this);
+    ui->nameLine->setValidator(validator);
+
     // установка допустимых значений averageScoreDB при запуске программы
     // если медаль есть
     if (ui->medalCheckB->isChecked())
@@ -97,6 +101,22 @@ void MainWindow::on_scoreSB_1_valueChanged(int arg1)
 
         ui->scoreSB_3->setValue(0);
         ui->scoreSB_3->setReadOnly(false);
+    }
+}
+
+
+void MainWindow::on_saveBtn_clicked()
+{
+    // нажатие на кнопку "Сохранить запись"
+
+    // Сохранение только при условии верного ввода
+    if (ui->nameLine->hasAcceptableInput())
+    {
+
+    }
+    else
+    {
+        QMessageBox::warning(this, "Корректность ввода", "ФИО введено неверно");
     }
 }
 

@@ -134,7 +134,32 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QDateEdit" name="birthdateEdit"/>
+            <widget class="QDateEdit" name="birthdateEdit">
+             <property name="maximumDateTime">
+              <datetime>
+               <hour>23</hour>
+               <minute>59</minute>
+               <second>59</second>
+               <year>2006</year>
+               <month>9</month>
+               <day>25</day>
+              </datetime>
+             </property>
+             <property name="maximumDate">
+              <date>
+               <year>2006</year>
+               <month>9</month>
+               <day>25</day>
+              </date>
+             </property>
+             <property name="minimumDate">
+              <date>
+               <year>1971</year>
+               <month>9</month>
+               <day>25</day>
+              </date>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -553,7 +578,7 @@
           </property>
          </item>
         </widget>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>30</x>
