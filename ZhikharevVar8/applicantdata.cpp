@@ -1,11 +1,10 @@
 #include "applicantdata.h"
 
-ApplicantData::ApplicantData(QObject *parent) : QObject(parent)
-{
+ApplicantData::ApplicantData() {
 
 }
 
-ApplicantData::ApplicantData(QObject *parent, QString &name, QDate &birthDate, Sex sex, bool hasMedal, double averageScore, QList<Language> foreignLanguage, QMap<Lesson, int> &examScore) : QObject(parent)
+ApplicantData::ApplicantData(QString &name, QDate &birthDate, Sex sex, bool hasMedal, double averageScore, QList<Language> foreignLanguage, QMap<Lesson, int> &examScore)
 {
     this->setName(name);
     this->setBirthDate(birthDate);
@@ -16,7 +15,7 @@ ApplicantData::ApplicantData(QObject *parent, QString &name, QDate &birthDate, S
     this->setExamScores(examScore);
 }
 
-ApplicantData::ApplicantData(QObject *parent, QString &name, QDate &birthDate, Sex sex, bool hasMedal, double averageScore, QList<Language> foreignLanguage) : QObject(parent)
+ApplicantData::ApplicantData(QString &name, QDate &birthDate, Sex sex, bool hasMedal, double averageScore, QList<Language> foreignLanguage)
 {
     this->setName(name);
     this->setBirthDate(birthDate);
@@ -26,7 +25,7 @@ ApplicantData::ApplicantData(QObject *parent, QString &name, QDate &birthDate, S
     this->setForeignLanguage(foreignLanguage);
 }
 
-QString ApplicantData::name() const
+QString ApplicantData::getName() const
 {
     return this->_name;
 }
@@ -36,7 +35,7 @@ void ApplicantData::setName(const QString &name)
     this->_name = name;
 }
 
-QDate ApplicantData::birthDate() const
+QDate ApplicantData::getBirthDate() const
 {
     return this->_birthDate;
 }
@@ -46,7 +45,7 @@ void ApplicantData::setBirthDate(const QDate &date)
     this->_birthDate = date;
 }
 
-Sex ApplicantData::sex() const
+Sex ApplicantData::getSex() const
 {
     return this->_sex;
 }
@@ -56,7 +55,7 @@ void ApplicantData::setSex(const Sex &sex)
     this->_sex = sex;
 }
 
-bool ApplicantData::hasMedal() const
+bool ApplicantData::getHasMedal() const
 {
     return this->_hasMedal;
 }
@@ -66,7 +65,7 @@ void ApplicantData::setHasMedal(const bool &has)
     this->_hasMedal = has;
 }
 
-double ApplicantData::averageScore() const
+double ApplicantData::getAverageScore() const
 {
     return this->_averageScore;
 }
@@ -76,7 +75,7 @@ void ApplicantData::setAverageScore(const double &score)
     this->_averageScore = score;
 }
 
-QList<Language> ApplicantData::foreignLanguage() const
+QList<Language> ApplicantData::getForeignLanguage() const
 {
     return this->_foreignLanguage;
 }
@@ -96,7 +95,7 @@ void ApplicantData::deleteForeignLanguage(const Language &l)
     this->_foreignLanguage.removeOne(l);
 }
 
-QMap<Lesson, int> ApplicantData::examScores() const
+QMap<Lesson, int> ApplicantData::getExamScores() const
 {
     return this->_examScores;
 }
@@ -119,6 +118,16 @@ void ApplicantData::deleteExamScore(const Lesson &l)
 int ApplicantData::getExamScore(const Lesson &l)
 {
     return this->_examScores[l];
+}
+
+bool ApplicantData::getIsReadyForContract() const
+{
+    return this->_isReadyForContract;
+}
+
+void ApplicantData::setIsReadyForContract(const bool &val)
+{
+    this->_isReadyForContract = val;
 }
 
 

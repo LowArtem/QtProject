@@ -21,48 +21,45 @@ enum Lesson
     MATH1, MATH2, PHYSICS, PHYSICS2, RUSSIAN
 };
 
-class ApplicantData : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(QDate birthDate READ birthDate WRITE setBirthDate)
-    Q_PROPERTY(Sex sex READ sex WRITE setSex)
-    Q_PROPERTY(bool hasMedal READ hasMedal WRITE setHasMedal)
-    Q_PROPERTY(double averageScore READ averageScore WRITE setAverageScore)
-    Q_PROPERTY(QList<Language> foreignLanguage READ foreignLanguage WRITE setForeignLanguage)
-    Q_PROPERTY(QMap<Lesson, int> examScores READ examScores WRITE setExamScores)
+class ApplicantData
+{   
 public:
-    ApplicantData(QObject *parent);
-    ApplicantData(QObject *parent, QString &name, QDate &birthDate, Sex sex, bool hasMedal,
-                  double averageScore, QList<Language> foreignLanguage, QMap<Lesson, int> &examScore);
-    ApplicantData(QObject *parent, QString &name, QDate &birthDate, Sex sex, bool hasMedal,
-                  double averageScore, QList<Language> foreignLanguage);
+    ApplicantData();
 
-    QString name() const;
+    ApplicantData(QString &name, QDate &birthDate, Sex sex, bool hasMedal,
+                  double averageScore, QList<Language> foreignLanguages, QMap<Lesson, int> &examScores);
+
+    ApplicantData(QString &name, QDate &birthDate, Sex sex, bool hasMedal,
+                  double averageScore, QList<Language> foreignLanguages);
+
+    QString getName() const;
     void setName(const QString &);
 
-    QDate birthDate() const;
+    QDate getBirthDate() const;
     void setBirthDate(const QDate &);
 
-    Sex sex() const;
+    Sex getSex() const;
     void setSex(const Sex &);
 
-    bool hasMedal() const;
+    bool getHasMedal() const;
     void setHasMedal(const bool &);
 
-    double averageScore() const;
+    double getAverageScore() const;
     void setAverageScore(const double &);
 
-    QList<Language> foreignLanguage() const;
+    QList<Language> getForeignLanguage() const;
     void setForeignLanguage(const QList<Language> &);
     void addForeignLanguage(const Language &);
     void deleteForeignLanguage(const Language &);
 
-    QMap<Lesson, int> examScores() const;
+    QMap<Lesson, int> getExamScores() const;
     void setExamScores(const QMap<Lesson, int> &);
     void addExamScore(const Lesson &, const int &);
     void deleteExamScore(const Lesson &);
     int getExamScore(const Lesson &);
+
+    bool getIsReadyForContract() const;
+    void setIsReadyForContract(const bool &);
 
 private:
     QString _name;
@@ -72,6 +69,7 @@ private:
     double _averageScore;
     QList<Language> _foreignLanguage;
     QMap<Lesson, int> _examScores;
+    bool _isReadyForContract;
 };
 
 #endif // APPLICANTDATA_H
